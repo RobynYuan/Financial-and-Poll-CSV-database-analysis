@@ -1,5 +1,7 @@
+# Import dependencies
 import os
 import csv
+# Define the path and read in the csv file
 with open("Resources/budget_data.csv", 'r') as budget_data:
     csv_reader=csv.reader (budget_data, delimiter=',')
 # Declaration for the variable   
@@ -7,7 +9,7 @@ with open("Resources/budget_data.csv", 'r') as budget_data:
     profit_Losses=[]
     csv_header=next(csv_reader)
     monthly_change=[]
-# Looping through the csv files to parse into two lists 
+# Looping through the csv files to parse into two lists, one is for the months, the other is for the profit/losses, also change the profit/losses to interger
     for row in csv_reader:
         months.append(row[0])
         profit_Losses.append((int)(row[1]))
@@ -29,23 +31,17 @@ print (f"Total: $ {net_total}")
 print (f"Average  Change: ${round(sum(monthly_change)/(len(profit_Losses)-1),2)}")
 print(f"Greatest Increase in Profits: {months [max_increase_month]}(${max_increase})")
 print(f"Greatest Decrease in Profits: {months [max_decrease_month]}(${max_decrease})")
-# # Opening a file
-# file1 = open('myfile.txt', 'w')
-# L = ["This is Delhi \n", "This is Paris \n", "This is London \n"]
-# s = "Hello\n"
-  
-# # Writing a string to file
-# file1.write(s)
-  
-# # Writing multiple strings
-# # at a time
-# file1.writelines(L)
-  
-# # Closing file
-# file1.close()
-  
-# # Checking if the data is
-# # written to file or not
-# file1 = open('myfile.txt', 'r')
-# print(file1.read())
-# file1.close()
+# write the result to a txt file in analysis folder
+f = open("analysis/PyBank_analysis.txt", 'w')
+f.write("Financial Analysis\n")
+f.write("--------------------------\n")
+f.write (f"Total Months:{len(months)}\n")
+f.write (f"Total: $ {net_total}\n")
+f.write (f"Average  Change: ${round(sum(monthly_change)/(len(profit_Losses)-1),2)}\n")
+f.write(f"Greatest Increase in Profits: {months [max_increase_month]}(${max_increase})\n")
+f.write(f"Greatest Decrease in Profits: {months [max_decrease_month]}(${max_decrease})\n")
+f.close()
+# Checking if the data is written to file or not
+file= open('analysis/PyBank_analysis.txt', 'r')
+print(file.read())
+file.close()
