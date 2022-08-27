@@ -24,9 +24,8 @@ Created a Python script that analyzes the records to calculate each of the follo
 
 Printed the analysis to the terminal and export a text file with the results.
 
-![result.png] (Images/analysis.png)
+![result.png] (Images/result.png)
 
 The result
 
 ![final_result.png] (Images/final_result.png)
-
