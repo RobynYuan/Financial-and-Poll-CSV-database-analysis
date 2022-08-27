@@ -20,7 +20,7 @@ Created a Python script that analyzes the records to calculate each of the follo
   The greatest increase in profits (date and amount) over the entire period
   The greatest decrease in profits (date and amount) over the entire period
 
-![analysis.png] (Images/analysis.png)
+![analysis.png](Images/analysis.png)
 
 Printed the analysis to the terminal and export a text file with the results.
 
@@ -28,4 +28,4 @@ Printed the analysis to the terminal and export a text file with the results.
 
 The result
 
-![final_result.png] (Images/final_result.png)
+![final_result.png](Images/final_result.png)
