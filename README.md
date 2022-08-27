@@ -36,7 +36,7 @@ Poll analysis
 
 Lauguage used: Python 
 
-! [Vote_counting.png] (Images/Vote_counting.png)
+![Vote_counting.png](Images/Vote_counting.png)
 
 
 
